@@ -4,11 +4,25 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 export default {
   component: Button,
-  title: 'Components/Button'
+  title: 'Components/Button',
+  argTypes: {
+    color: {
+      options: ['primary', 'secondary'],
+      control: { type: 'select' }
+    },
+    size: {
+      options: ['small', 'large'],
+      control: { type: 'select' }
+    }
+  }
 } as Meta<typeof Button>
 
-type Story = StoryObj<typeof Button>
+type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
-  render: () => <Button>button</Button>
+  render: (args) => <Button {...args}>button</Button>,
+}
+
+export const Secondary: Story = {
+  render: (args) => <Button color='secondary' {...args}>button</Button>,
 }
