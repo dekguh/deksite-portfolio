@@ -25,13 +25,13 @@ const buttonCva = cva('btn text-white rounded-none border-none min-h-0 h-auto fo
   }
 })
 
-interface IButtonCva extends VariantProps<typeof buttonCva>,IButtonProps {}
+interface IButtonCva extends VariantProps<typeof buttonCva> {}
 
-const Button = React.forwardRef<HTMLButtonElement, PropsWithRef<IButtonCva>>((props, ref) => {
-  const { children, color, size, ...rest } = props
+const Button = React.forwardRef<HTMLButtonElement, PropsWithRef<IButtonCva & IButtonProps>>((props, ref) => {
+  const { children, color = 'primary', size = 'large', className, ...rest } = props
 
   return <button
-    className={twMerge(buttonCva({ color, size }))}
+    className={twMerge(buttonCva({ color, size }), className)}
     ref={ref}
     {...rest}
   >
