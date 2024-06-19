@@ -1,7 +1,8 @@
 import IconButton from './IconButton'
 
-import { expect, test, describe, vitest } from 'vitest'
 import ContentCopyIcon from '@mui/icons-material/ContentCopy'
+
+import { expect, test, describe, vitest } from 'vitest'
 import { screen, render, fireEvent } from '@testing-library/react'
 
 describe('Icon Button unit testing', () => {
