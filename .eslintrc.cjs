@@ -30,11 +30,13 @@ module.exports = {
         'groups': [
           'react',
           'internal-components',
+          'custom-assets',
           'custom-components',
           'custom-config',
           'custom-features',
           'custom-hooks',
           'custom-lib',
+          'custom-mui',
           'custom-providers',
           'custom-routes',
           'custom-stores',
@@ -47,6 +49,7 @@ module.exports = {
             'react': ['react', 'react-dom/*', 'react-redux', 'react-router-dom', '@reduxjs/**'],
             'internal-components': './**',
             'custom-components': '@/components/**',
+            'custom-mui': '@mui/**',
             'custom-config': '@/config/**',
             'custom-features': '@/features/**',
             'custom-hooks': '@/hooks/**',
@@ -55,7 +58,8 @@ module.exports = {
             'custom-routes': '@/routes/**',
             'custom-stores': '@/stores/**',
             'custom-types': '@/types/**',
-            'custom-utils': '@/utils/**'
+            'custom-utils': '@/utils/**',
+            'custom-assets': '@/assets/**',
           }
         },
         'internal-pattern': [
