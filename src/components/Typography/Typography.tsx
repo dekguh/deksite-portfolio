@@ -18,8 +18,8 @@ const typographyCva = cva('text-gray-900', {
       subtitle: ['text-base font-medium']
     },
     color: {
-      heading: [''],
-      body: ['']
+      heading: ['text-gray-900'],
+      body: ['text-zinc-500']
     }
   },
   defaultVariants: {}
